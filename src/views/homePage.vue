@@ -4,23 +4,27 @@
       <h1>数据可视化</h1>
     </header>
     <section class="container">
+      <!-- 左盒子 -->
       <section class="itemLeft">
         <ItemPage>
-            <ItemOne/>
+          <ItemOne />
         </ItemPage>
 
         <ItemPage>
-            <ItemTwo/>
+          <ItemTwo />
         </ItemPage>
       </section>
-
-      <section class="itemCenter"></section>
+      <!-- 中 -->
+      <section class="itemCenter">
+        <MapPage />
+      </section>
+      <!-- 右边盒子 -->
       <section class="itemRight">
         <ItemPage>
-            <ItemThree/>
+          <ItemThree />
         </ItemPage>
         <ItemPage>
-            <ItemFour/>
+          <ItemFour />
         </ItemPage>
       </section>
     </section>
@@ -34,17 +38,22 @@ import ItemOne from "@/components/itemOne.vue";
 import ItemTwo from "@/components/itemTwo.vue";
 import ItemThree from "@/components/itemThree.vue";
 import ItemFour from "@/components/itemFour.vue";
-import {inject} from "vue";
+import MapPage from "@/components/mapPage.vue";
+import { inject } from "vue";
 export default {
+  components: {
+    ItemPage,
+    ItemOne,
+    ItemTwo,
+    ItemThree,
+    ItemFour,
+    MapPage,
+  },
 
-  components: { 
-    ItemPage, ItemOne,ItemTwo,ItemThree,ItemFour
-},
-
-setup(){
-  // let $echarts=inject("echarts");
-  // let $http=inject("axios")
-}
+  setup() {
+    // let $echarts=inject("echarts");
+    // let $http=inject("axios")
+  },
 };
 </script>
 
@@ -67,7 +76,7 @@ header {
   max-width: 2048px;
   margin: 0 auto;
   padding: 0.125rem 0.125rem 0;
-//   background-color: gray;
+  //   background-color: gray;
   display: flex;
   // 设置左右配置
   .itemLeft,
@@ -76,8 +85,8 @@ header {
   }
   .itemCenter {
     height: 30.25rem;
-    padding: 0.625rem ;
-    margin: .25rem;
+    padding: 0.625rem;
+    margin: 0.25rem;
     border: 1px solid blue;
     flex: 5;
   }
