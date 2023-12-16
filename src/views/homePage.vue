@@ -34,10 +34,17 @@ import ItemOne from "@/components/itemOne.vue";
 import ItemTwo from "@/components/itemTwo.vue";
 import ItemThree from "@/components/itemThree.vue";
 import ItemFour from "@/components/itemFour.vue";
+import {inject} from "vue";
 export default {
+
   components: { 
     ItemPage, ItemOne,ItemTwo,ItemThree,ItemFour
 },
+
+setup(){
+  // let $echarts=inject("echarts");
+  // let $http=inject("axios")
+}
 };
 </script>
 
@@ -49,7 +56,7 @@ header {
   h1 {
     font-size: 1.5rem;
     color: #fff;
-    line-height: 1.5rem;
+    line-height: 2.5rem;
     text-align: center;
   }
 }
@@ -68,7 +75,7 @@ header {
     flex: 3;
   }
   .itemCenter {
-    height: 30rem;
+    height: 30.25rem;
     padding: 0.625rem ;
     margin: .25rem;
     border: 1px solid blue;
