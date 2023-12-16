@@ -1,5 +1,9 @@
 # echartsdemo2
-
+Node + vue3 + echarts 
+## server set up
+```
+node index.js
+```
 ## Project setup
 ```
 npm install
